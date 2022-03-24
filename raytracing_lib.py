@@ -131,8 +131,9 @@ class C_circle:
 class C_lens:
     def __init__(self, x, r1, r2, d, material, max_height=5):
         self.start_pos = x
-        self.r1 = r1 + 1000*(r1 == 0)
-        self.r2 = r2 - 1000*(r2 == 0)
+        self.end_pos = x + d
+        self.r1 = r1 + 1000000*(r1 == 0)
+        self.r2 = r2 - 1000000*(r2 == 0)
         self.r1_pos = x + self.r1
         self.r2_pos = x + d + self.r2 
         self.d = d
